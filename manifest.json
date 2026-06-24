@@ -5,6 +5,15 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_icon": "hello_extensions.png", 
+  "content scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"], 
+      "run_at": "document_start", 
+      "run_at": "document_idle", 
+      "run_at": "document_end"
+    }
+  ]
   }
 }
